@@ -50,3 +50,17 @@ VALUES (1, 'Americano', 30000, 'credit'),
 -- select query for menu_order's table
 SELECT * FROM menu_order;
 
+-- update loyalty_points manually
+-- using transaction
+BEGIN;
+
+UPDATE customer SET loyalty_points = loyalty_points + 10 WHERE customer_id = 1;
+UPDATE customer SET loyalty_points = loyalty_points + 10 WHERE customer_id = 2;
+UPDATE customer SET loyalty_points = loyalty_points + 10 WHERE customer_id = 3;
+UPDATE customer SET loyalty_points = loyalty_points + 10 WHERE customer_id = 4;
+UPDATE customer SET loyalty_points = loyalty_points + 10 WHERE customer_id = 4;
+UPDATE customer SET loyalty_points = loyalty_points + 10 WHERE customer_id = 6;
+UPDATE customer SET loyalty_points = loyalty_points + 10 WHERE customer_id = 6;
+UPDATE customer SET loyalty_points = loyalty_points + 10 WHERE customer_id = 5;
+
+COMMIT;

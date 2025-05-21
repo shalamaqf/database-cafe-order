@@ -32,3 +32,17 @@ VALUES ('Reyhan', 'reyhan@gmail.com'),
 
 -- select query for customer's table
 SELECT * FROM customer;
+
+-- insert values to menu_order's table
+INSERT INTO menu_order (customer_id, menu_name, menu_price, payment_method)
+VALUES (1, 'Americano', 30000, 'credit'),
+       (2, 'Latte', 35000, 'e-money'),
+       (3, 'Spanish Latte', 37000, 'credit'),
+       (4, 'Strawberry Frappe', 40000, 'cash'),
+       (4, 'Butter Croissant', 25000, 'cash'),
+       (6, 'Chocolate Frappe', 39000, 'cash'),
+       (6, 'Choco Cookies', 32000, 'cash'),
+       (5, 'Butterscotch Latte', 36000, 'e-money');
+
+-- select query for menu_order's table
+SELECT * FROM menu_order;

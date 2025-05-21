@@ -23,9 +23,12 @@ CREATE TABLE menu_order
 
 -- insert values to customer's table
 INSERT INTO customer (customer_name, customer_email)
-values ('Reyhan', 'reyhan@gmail.com'),
+VALUES ('Reyhan', 'reyhan@gmail.com'),
        ('Lala', 'lala@gmail.com'),
        ('Syifa', 'syifa@gmail.com'),
        ('Aisyah', 'aisyah@gmail.com'),
        ('Rahma', 'rahma@gmail.com'),
        ('Amir', 'amir@gmail.com');
+
+-- select query for customer's table
+SELECT * FROM customer;

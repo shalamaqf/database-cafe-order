@@ -7,8 +7,11 @@ CREATE TABLE customer
     customer_id serial PRIMARY KEY,
     customer_name varchar (100) not null,
     customer_email varchar (100) not null,
-    loyalty_points int 
+    loyalty_points int default 0
 );
+
+ALTER TABLE customer
+ALTER COLUMN loyalty_points SET DEFAULT 0;
 
 -- create a table for menu order
 CREATE TABLE menu_order
@@ -46,3 +49,4 @@ VALUES (1, 'Americano', 30000, 'credit'),
 
 -- select query for menu_order's table
 SELECT * FROM menu_order;
+

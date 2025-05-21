@@ -10,9 +10,6 @@ CREATE TABLE customer
     loyalty_points int default 0
 );
 
-ALTER TABLE customer
-ALTER COLUMN loyalty_points SET DEFAULT 0;
-
 -- create a table for menu order
 CREATE TABLE menu_order
 (
@@ -21,6 +18,7 @@ CREATE TABLE menu_order
     menu_name varchar (100) not null,
     menu_price int not null,
     payment_method method not null,
+    order_date timestamp not null default current_timestamp,
     CONSTRAINT fk_customer FOREIGN KEY (customer_id) REFERENCES customer(customer_id)
 );
 
@@ -64,3 +62,4 @@ UPDATE customer SET loyalty_points = loyalty_points + 10 WHERE customer_id = 6;
 UPDATE customer SET loyalty_points = loyalty_points + 10 WHERE customer_id = 5;
 
 COMMIT;
+

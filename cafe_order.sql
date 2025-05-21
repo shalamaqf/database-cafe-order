@@ -11,7 +11,7 @@ CREATE TABLE customer
 );
 
 -- create a table for menu order
-create table menu_order
+CREATE TABLE menu_order
 (
     order_id SERIAL PRIMARY KEY,
     customer_id int not null,
@@ -21,3 +21,11 @@ create table menu_order
     CONSTRAINT fk_customer FOREIGN KEY (customer_id) REFERENCES customer(customer_id)
 );
 
+-- insert values to customer's table
+INSERT INTO customer (customer_name, customer_email)
+values ('Reyhan', 'reyhan@gmail.com'),
+       ('Lala', 'lala@gmail.com'),
+       ('Syifa', 'syifa@gmail.com'),
+       ('Aisyah', 'aisyah@gmail.com'),
+       ('Rahma', 'rahma@gmail.com'),
+       ('Amir', 'amir@gmail.com');

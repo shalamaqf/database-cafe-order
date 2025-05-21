@@ -63,3 +63,7 @@ UPDATE customer SET loyalty_points = loyalty_points + 10 WHERE customer_id = 5;
 
 COMMIT;
 
+-- inner join between customer's and menu_order's table
+SELECT customer_name, menu_name, menu_price, order_date, loyalty_points
+FROM menu_order
+INNER JOIN customer on menu_order.customer_id = customer.customer_id;
